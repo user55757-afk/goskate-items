@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>go skate. items</title>
   <style>
+
+ nav {
+    display: flex;
+    flex-wrap: wrap;      
+    gap: 8px;             
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;  /* ať se text nezalamuje */
+  }
+
+  nav select {
+    max-width: 150px;    
+    font-size: 14px;
+  }
+
+  /* Mobilní verze */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+
+    nav select {
+      width: 100%; 
+    }
+  }
+
+
+
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -232,16 +266,16 @@ html {
         <option value="">Select...</option>
         <option value="gen3-boofs">Boofs</option>
         <option value="gen3-funfetti">Funfetti</option>
-        <option value="gen3-rep3">Rep Shop3</option>
+        <option value="gen3-rep3">Rep Shop 3</option>
       </select>
 
       <!-- Gen2 -->
       <a href="#gen2">DROP 2</a>
       <select onchange="scrollToCase(this)">
         <option value="">Select...</option>
-        <option value="gen2-printshop2">Printshop2</option>
+        <option value="gen2-printshop2">Printshop 2</option>
         <option value="gen2-paxk">Paxk</option>
-        <option value="gen2-rep2">Rep Shop2</option>
+        <option value="gen2-rep2">Rep Shop 2</option>
       </select>
 
       <!-- Gen1 -->
@@ -250,7 +284,7 @@ html {
         <option value="">Select...</option>
         <option value="gen1-greenhouse">Greenhouse</option>
         <option value="gen1-printshop">Printshop</option>
-        <option value="gen1-rep1">Rep Shop1</option>
+        <option value="gen1-rep1">Rep Shop 1</option>
       </select>
     </nav>
   </header>
