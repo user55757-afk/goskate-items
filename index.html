@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -16,7 +17,7 @@
   nav a {
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap;  /* ať se text nezalamuje */
+    white-space: nowrap;  
   }
 
   nav select {
@@ -98,6 +99,61 @@ footer {
 }
 
 
+header {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Dropdown vlevo */
+.logo-dropdown {
+  position: relative;
+}
+
+.logo-btn {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo-btn:hover {
+  color: #987bc9;
+}
+
+.logo-menu {
+  display: none;
+  position: absolute;
+  left: -7%;
+  top: 100%;
+  background-color: #1a1a1a;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  z-index: 100;
+  border-radius: 6px;
+}
+
+.logo-menu a {
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.logo-menu a:hover {
+  background-color: #333;
+}
+
+.logo-dropdown:hover .logo-menu {
+  display: block;
+}
+
+
 
 
 header h1 a {
@@ -106,7 +162,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-  color: #bbaed2; /* třeba jemná fialová při hoveru */
+  color: #bbaed2; 
 }
 
 
@@ -246,8 +302,18 @@ html {
 
 
   <header>
-    <h1><a href="#top">go skate. items</a></h1>
+    
     <nav>
+
+ <div class="logo-dropdown">
+    <span class="logo-btn">go skate. items ▼</span>
+    <div class="logo-menu">
+      <a href="https://docs.google.com/spreadsheets/d/1hjqVTcOgMhjZ7lXJ2ezI_lKcHSWYcSsyblhbVjY4eZQ/edit?usp=sharing">go skate. RAP values</a>
+    </div>
+  </div>
+
+</nav>
+<nav style="text-align: right;">
 
 
       <!-- Gen4 -->
